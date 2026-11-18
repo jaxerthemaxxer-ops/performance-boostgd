@@ -1,0 +1,86 @@
+{
+    "geode": "5.11.2",
+    "gd": {
+        "win": "2.2081",
+        "android": "2.2081",
+        "mac": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "devassistant.performance-boost",
+    "name": "Performance Boost",
+    "version": "v1.0.0",
+    "developer": "DevAssistant",
+    "description": "Raises your framerate in levels by switching off costly visual effects, with an optional live FPS and frame-time overlay.",
+    "tags": [
+        "enhancement",
+        "utility"
+    ],
+    "settings": {
+        "enabled": {
+            "name": "Enable optimizations",
+            "description": "Master switch for every optimization below. The FPS overlay is separate and keeps working when this is off.",
+            "type": "bool",
+            "default": true
+        },
+        "disable-particles": {
+            "name": "Disable player particles",
+            "description": "Stops and hides the player's ground, trailing, land, dash, burst, and click particles. Large FPS gain on weaker PCs and phones.",
+            "type": "bool",
+            "default": true
+        },
+        "disable-trails": {
+            "name": "Disable trails",
+            "description": "Hides the regular trail and the wave trail. Wave trails are easy to see, so this is off by default.",
+            "type": "bool",
+            "default": false
+        },
+        "disable-shake": {
+            "name": "Disable camera shake",
+            "description": "Ignores shake triggers. Saves a little work and removes screen shake.",
+            "type": "bool",
+            "default": true
+        },
+        "hide-background": {
+            "name": "Hide background",
+            "description": "Hides the level background sprite. Helps on slow GPUs, but changes how levels look.",
+            "type": "bool",
+            "default": false
+        },
+        "purge-textures": {
+            "name": "Free unused textures in menus",
+            "description": "Releases textures nothing is using each time the main menu loads. Lowers memory use, but the first visit to some screens may load slightly slower.",
+            "type": "bool",
+            "default": false
+        },
+        "fps-overlay": {
+            "name": "Show FPS overlay",
+            "description": "Shows FPS, average frame time, and the worst frame time of the last half second during levels.",
+            "type": "bool",
+            "default": false
+        },
+        "overlay-corner": {
+            "name": "Overlay corner",
+            "description": "Which screen corner the overlay sits in.",
+            "type": "string",
+            "default": "Top left",
+            "one-of": [
+                "Top left",
+                "Top right",
+                "Bottom left",
+                "Bottom right"
+            ]
+        },
+        "overlay-scale": {
+            "name": "Overlay size",
+            "description": "Size of the overlay text.",
+            "type": "float",
+            "default": 0.4,
+            "min": 0.2,
+            "max": 1.0,
+            "control": {
+                "slider": true,
+                "slider-step": 0.05
+            }
+        }
+    }
+}
